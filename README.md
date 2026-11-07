@@ -70,3 +70,13 @@ scripts/             prueba de humo contra el sandbox
 ## Estado
 
 Es el origen de la lógica que después se reescribió en C# como `terminal-f` (terminal WPF en C#). No tiene suite de tests.
+
+## Créditos
+
+- [ppi-client](https://pypi.org/project/ppi-client/): SDK oficial de Portfolio Personal Inversiones. El adaptador `brokers/ppi_adapter.py` está alineado con su interfaz. El SDK no está incluido.
+- [PySide6 / Qt for Python](https://pyside.org) (LGPL) y [requests](https://requests.readthedocs.io).
+- Los ejemplos de la documentación de la API de PPI se usaron como referencia y no se incluyen.
+
+## Licencia
+
+Código bajo [licencia MIT](LICENSE). © 2026 Nahuel Emiliano Diaz.
