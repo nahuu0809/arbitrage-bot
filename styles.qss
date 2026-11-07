@@ -1,0 +1,258 @@
+/* ══════════════════════════════════════════
+   styles.qss - Tema oscuro minimalista
+   Inspirado en herramientas de trading profesionales
+   ══════════════════════════════════════════ */
+
+/* ── Variables de color (custom properties via paleta) ── */
+/* Background principal */
+QMainWindow, QWidget {
+    background-color: #0F1117;
+    color: #D1D5DB;
+    font-family: "Inter", "Segoe UI", "SF Pro Display", sans-serif;
+    font-size: 13px;
+}
+
+/* ── Status Panel ── */
+#statusPanel {
+    background-color: #1A1D27;
+    border-bottom: 1px solid #2D3748;
+    border-radius: 0px;
+}
+
+#statusBadge {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 0px;
+}
+
+#statusBadge[statusStyle="positive"]  { color: #10B981; }
+#statusBadge[statusStyle="negative"]  { color: #EF4444; }
+#statusBadge[statusStyle="warning"]   { color: #F59E0B; }
+#statusBadge[statusStyle="neutral"]   { color: #6B7280; }
+
+#metricLabel {
+    font-size: 11px;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#metricValue {
+    font-size: 18px;
+    font-weight: 600;
+    color: #F9FAFB;
+}
+
+#metricValue[colorStyle="positive"] { color: #10B981; }
+#metricValue[colorStyle="negative"] { color: #EF4444; }
+
+/* ── Log Viewer ── */
+#logViewer {
+    background-color: #1A1D27;
+    border: 1px solid #2D3748;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#logText {
+    background-color: #111318;
+    color: #D1D5DB;
+    font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+    font-size: 12px;
+    border: none;
+    selection-background-color: #374151;
+}
+
+QScrollBar:vertical {
+    background: #1A1D27;
+    width: 8px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #374151;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #4B5563;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* ── Section Titles ── */
+#sectionTitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 4px 0px;
+}
+
+/* ── Controls Bar ── */
+#controlsBar {
+    background-color: #1A1D27;
+    border-top: 1px solid #2D3748;
+    border-radius: 0px;
+}
+
+/* Botones base */
+QPushButton {
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #1F2937;
+    color: #D1D5DB;
+}
+
+QPushButton:hover {
+    background-color: #374151;
+    border-color: #4B5563;
+}
+
+QPushButton:pressed {
+    background-color: #111827;
+}
+
+QPushButton:disabled {
+    background-color: #111827;
+    color: #374151;
+    border-color: #1F2937;
+}
+
+/* Botón START */
+#btnStart {
+    background-color: #065F46;
+    border-color: #059669;
+    color: #ECFDF5;
+}
+
+#btnStart:hover {
+    background-color: #047857;
+    border-color: #10B981;
+}
+
+#btnStart:disabled {
+    background-color: #064E3B;
+    color: #374151;
+    border-color: #064E3B;
+}
+
+/* Botón STOP */
+#btnStop {
+    background-color: #7F1D1D;
+    border-color: #DC2626;
+    color: #FEF2F2;
+}
+
+#btnStop:hover {
+    background-color: #991B1B;
+    border-color: #EF4444;
+}
+
+/* Botón PAUSE */
+#btnPause {
+    background-color: #78350F;
+    border-color: #D97706;
+    color: #FFFBEB;
+}
+
+#btnPause:hover {
+    background-color: #92400E;
+}
+
+/* ── Tabla de posiciones ── */
+#positionsTable {
+    background-color: #1A1D27;
+    border: 1px solid #2D3748;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#dataTable {
+    background-color: #111318;
+    alternate-background-color: #161921;
+    color: #D1D5DB;
+    gridline-color: #1F2937;
+    border: none;
+    border-radius: 4px;
+    selection-background-color: #1E3A5F;
+    selection-color: #BFDBFE;
+}
+
+QHeaderView::section {
+    background-color: #1F2937;
+    color: #9CA3AF;
+    border: none;
+    border-right: 1px solid #374151;
+    padding: 8px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* ── Splitter ── */
+QSplitter::handle {
+    background-color: #2D3748;
+    width: 1px;
+    height: 1px;
+}
+
+/* ── Config Dialog ── */
+QDialog {
+    background-color: #1A1D27;
+}
+
+QLabel {
+    color: #9CA3AF;
+}
+
+QDoubleSpinBox, QSpinBox {
+    background-color: #111318;
+    border: 1px solid #374151;
+    border-radius: 4px;
+    color: #F9FAFB;
+    padding: 6px 8px;
+    font-size: 13px;
+}
+
+QDoubleSpinBox:focus, QSpinBox:focus {
+    border-color: #3B82F6;
+}
+
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button,
+QSpinBox::up-button, QSpinBox::down-button {
+    background-color: #1F2937;
+    border: none;
+    width: 16px;
+}
+
+QCheckBox {
+    color: #D1D5DB;
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #4B5563;
+    border-radius: 3px;
+    background-color: #111318;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3B82F6;
+    border-color: #3B82F6;
+}
+
+QDialogButtonBox QPushButton {
+    min-width: 80px;
+}

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# credenciales y configuración local: NUNCA subir
+settings.json
+.env
+.env.*
+
+# base de datos y logs generados en ejecución
+*.sqlite3
+*.db
+*.log
+logs/
+
+# material de terceros (documentación de la API, repos de referencia)
+docs/
+external_refs/
+
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

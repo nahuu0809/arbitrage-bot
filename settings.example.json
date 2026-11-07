@@ -1,0 +1,70 @@
+{
+  "mode": "sandbox",
+
+  "ppi": {
+    "username": "TU_USUARIO",
+    "password": "TU_CLAVE",
+    "account_number": "TU_NUMERO_DE_CUENTA",
+    "api_base_url": "https://clientapisandbox.portfoliopersonal.com/api/",
+    "rate_limit_per_minute": 60,
+    "token_renewal_seconds_before_expiry": 300
+  },
+
+  "trading": {
+    "initial_capital": 100000,
+    "min_net_profit": 500,
+    "max_daily_loss_percent": 10,
+    "max_capital_per_operation_percent": 100,
+    "polling_interval_seconds": 5,
+    "max_slippage_percent": 0.3,
+    "min_book_depth_ars": 10000,
+    "validation_timeout_seconds": 5,
+    "order_book_positions_to_check": 3
+  },
+
+  "instruments": {
+    "byma_local_tickers": ["GGAL", "YPFD", "PAMP", "BMA", "TXAR"],
+    "eligible_tickers": ["AL30", "AL30D", "GD30", "GD30D", "AAPL", "GOOGL", "MSFT", "TSLA"]
+  },
+
+  "risk": {
+    "enable_caucion_at_close": true,
+    "caucion_min_rate_percent": 40,
+    "max_position_por_ticker": 100,
+    "max_loss_diario": 10000,
+    "stop_trading_flag": false
+  },
+
+  "arbitraje": {
+    "enabled": true,
+    "tasa_minima": 0.25
+  },
+
+  "market_making": {
+    "enabled": false,
+    "ticker": "GGAL",
+    "settlement": "CI",
+    "min_spread": 0.5,
+    "order_size": 10,
+    "max_position": 100,
+    "cancel_threshold_ticks": 2
+  },
+
+  "tick_table": [
+    { "min": 0, "max": 10, "tick": 0.01 },
+    { "min": 10, "max": 100, "tick": 0.05 },
+    { "min": 100, "max": 1000, "tick": 0.10 },
+    { "min": 1000, "max": null, "tick": 0.50 }
+  ],
+
+  "byma": {
+    "supported_settlements": ["CI", "24hs"],
+    "supported_asset_type": "ACCIONES"
+  },
+
+  "market": {
+    "open_time": "10:30",
+    "close_time": "17:30",
+    "trading_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  }
+}

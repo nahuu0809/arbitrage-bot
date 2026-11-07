@@ -1,0 +1,19 @@
+# Bot de Trading Argentina - Dependencias
+# Python 3.10+
+
+# UI
+PySide6>=6.6.0
+
+# HTTP client (para API PPI)
+requests>=2.31.0
+ppi-client>=1.2.0
+
+# Tipos y utilidades
+typing-extensions>=4.8.0
+
+# Empaquetado (solo para build)
+# pyinstaller>=6.0.0
+
+# Desarrollo y testing
+# pytest>=7.4.0
+# pytest-qt>=4.2.0
